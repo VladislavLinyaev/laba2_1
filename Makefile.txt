@@ -1,0 +1,10 @@
+all: func1.o main1.o
+	gcc main1.c func1.c
+func.o: func1.c
+	gcc -c func1.c
+main.o: main1.c
+	gcc -c main1.c
+clean:
+	rm *.o
+install:
+	cp baza0 /usr/bin
